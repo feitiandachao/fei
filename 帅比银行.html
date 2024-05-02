@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="4">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //用户取款机
+        //用户可以选择存钱取钱等功能
+        alert("你好，欢迎来到帅比银行")
+        //后期加一个账户登录的.每个账户有不同的钱
+        let yuE = 1000
+
+        while (true) {
+            let qian = +prompt(`请选择你的操作:
+                             1.取钱           2.存钱
+                             3.查看余额     4.退出`)
+            // 取钱
+            if (qian === 1) {
+                let qu = +prompt(`您的余额为${yuE},请输入您要取出的金额`)
+                alert(`您本次取出的金额为${qu}`)
+                    + prompt(`您先在的金额为${yuE -= qu}`)
+            }
+            // 存钱
+            if (qian === 2) {
+                let cun = +prompt(`您的余额为${yuE},请输入您要存的金额`)
+                alert(`您本次存储的金额为${cun}`)
+                prompt(`您先在的金额为${yuE += cun}`)
+
+            }
+            // 查看余额
+            if (qian === 3) {
+                prompt(`您的余额为${yuE}`)
+
+            }
+            // 退出
+            if (qian === 4) {
+                alert('感谢您的光临,再见')
+                break
+            }
+        }
+
+        // 黑马这里用了switch语句，区别是if...else...多用于区间，而switch用于确定的值
+        //效率问题，if...else...多用于少分枝的，switch用于多分支效率高且结构更清晰
+
+
+    </script>
+</body>
+
+</html>
